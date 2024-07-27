@@ -53,3 +53,17 @@ const questions = [
         message: "Provide walkthrough of test"
     }, 
 ]
+
+// Writing README.md File
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  }
+  
+  // Initializing app
+  function init() {
+    inquirer.prompt(questions).then((responses) => {
+      console.log("Creating Professional README.md File...");
+      writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
+    });
+  }
+  init();
