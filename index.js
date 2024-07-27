@@ -2,6 +2,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
+const generateMarkdown = require("./utils/generateMarkdown")
 
 // prompts
 const questions = [
@@ -30,12 +31,6 @@ const questions = [
         type: "input",
         name: "usage",
         message: "Provide instructions and examples for use"
-    },
-
-    {
-        type: "input",
-        name: "credits",
-        message: "List your contributors"
     },
     {
         type: "input",
