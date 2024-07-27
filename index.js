@@ -46,7 +46,7 @@ const questions = [
         type: "input",
         name: "test",
         message: "Provide walkthrough of test"
-    }, 
+    },   
 ]
 
 // Writing README.md File
